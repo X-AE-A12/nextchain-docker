@@ -17,13 +17,13 @@ cd nextchain-docker
 ## step 2: build the image
 You can build the latest image by running:
 ```
-docker build -t nextchain:3.5.0 ./3.5.0
+docker build -t nextchain:latest ./3.5.0
 ```
 
 ## use latest image
 If you rather want to work with an existing image (albeit in the example repo) then pull the 3.5.0 image from Dockerhub:
 ```
-docker pull xaea12/nextchain:3.5.0
+docker pull xaea12/nextchain:latest
 ```
 
 ## contribute
