@@ -9,19 +9,23 @@ Please note that this software is considered alpha and could really use some imp
 
 ## step 1: clone this project
 You can clone this project with the following commands:
-`
+```
 git clone https://github.com/X-AE-A12/nextchain-docker.git
 cd nextchain-docker
-`
+```
 
 ## step 2: build the image
 You can build the latest image by running:
-`docker build -t nextchain:3.5.0 ./3.5.0`
+```
+docker build -t nextchain:3.5.0 ./3.5.0
+```
 
 ## use latest image
 If you rather want to work with an existing image (albeit in the example repo) then pull the 3.5.0 image from Dockerhub:
-`docker pull xaea12/nextchain:3.5.0`
+```
+docker pull xaea12/nextchain:3.5.0
+```
 
 ## contribute
-I'd really appreciate it if we can fix the example repo so we can successfully interact with the RPC port! The codebase is mostly inspired by the works of https://github.com/NicolasDorier/docker-bitcoin, check that out as well. 
+I'd really appreciate it if we can fix the example repo so we can successfully interact with the RPC port! Feel free to submit PRs. This codebase is mostly inspired by the works of [docker-bitcoin](https://github.com/NicolasDorier/docker-bitcoin), check that out as well. 
 
