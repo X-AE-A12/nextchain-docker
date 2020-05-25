@@ -9,8 +9,10 @@ Please note that this software is considered alpha and could really use some imp
 
 ## step 1: clone this project
 You can clone this project with the following commands:
-` git clone https://github.com/X-AE-A12/nextchain-docker.git
-cd nextchain-docker`
+`
+git clone https://github.com/X-AE-A12/nextchain-docker.git
+cd nextchain-docker
+`
 
 ## step 2: build the image
 You can build the latest image by running:
