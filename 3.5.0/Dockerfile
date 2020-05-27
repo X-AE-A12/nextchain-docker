@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 
-RUN groupadd -r next && useradd -r -m -g next next
+RUN groupadd -r nextcoin && useradd -r -m -g nextcoin nextcoin
 
 RUN set -ex \
 	&& apt-get update \
@@ -9,6 +9,8 @@ RUN set -ex \
 
 ENV NEXT_VERSION 3.5.0
 ENV NEXT_URL https://github.com/NextExchange/next-wallet-desktop-app/releases/download/3.5.0/nextcoind-3.5.0-linux.zip
+ENV NEXT_RPC_USERNAME user
+ENV NEXT_RPC_PASSWORD password
 
 #-----------------------
 # install next binaries
@@ -24,9 +26,9 @@ RUN set -ex \
 # create data directory
 ENV NEXT_DATA /data
 RUN mkdir "$NEXT_DATA" \
-	&& chown -R next:next "$NEXT_DATA" \
-	&& ln -sfn "$NEXT_DATA" /home/next/.next \
-	&& chown -h next:next /home/next/.next
+	&& chown -R nextcoin:nextcoin "$NEXT_DATA" \
+	&& ln -sfn "$NEXT_DATA" /home/nextcoin/.nextcoin \
+	&& chown -h nextcoin:nextcoin /home/nextcoin/.nextcoin
 VOLUME /data
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
